@@ -19,3 +19,9 @@ NETDOM /Domain:corp.atellis.com /user:adminuser /password:apassword MEMBER MYCOM
 
 Rem Adds the domain user as a local admin. Replace user.name
 net localgroup administrators corp.atellis.com.local\user.name /add && echo Domain user added as admin>> C:\Checkout\InstallLog.txt
+
+Rem Deletes the local user DM used for initial Windows Setup
+net localgroup administrators dm /delete && echo Windows Setup user DM deleted>> C:\Checkout\InstallLog.txt
+
+Rem Restart
+shutdown -r -f -t 01
