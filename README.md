@@ -1,11 +1,11 @@
 rem Set Windows License Key
 rem Set Hostname
 rem Set Domain
-rem Restart
 rem Add domain user
-
+rem Restart
 
 Rem Each step writes to C:\Checkpout\InstallLog.txt if the step worked
+echo %date% -- %time%>C:\Checkpout\InstallLog.txt
 
 Rem Set Windows License Key -- delete 0's, keep -'s
 Slmgr.vbs -ipk 00000-00000-00000-00000-00000
